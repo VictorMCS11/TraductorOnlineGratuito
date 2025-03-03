@@ -15,7 +15,7 @@ const openai = new OpenAI({
 // Middleware
 app.use(express.json());
 app.use(cors({
-    origin: ['https://.es', 'http://192.168.1.107:5173', 'http://192.168.1.107:5174', 'http://localhost:5173', 'http://localhost:5174'],  // Permite todos los orígenes (no recomendado en producción),
+    origin: ['https://traductoronlinegratis.site/', 'http://192.168.1.107:5173', 'http://192.168.1.107:5174', 'http://localhost:5173', 'http://localhost:5174'],  // Permite todos los orígenes (no recomendado en producción),
     methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
     credentials: true, // Si necesitas enviar cookies o encabezados de autenticación
 }));
@@ -65,5 +65,5 @@ app.get('/translate', async (req: Request, res: Response) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo puerto ${PORT}`);
 });
